@@ -1,0 +1,76 @@
+.form-group{
+	@extend .w-100;
+	@extend .mb-2;
+	@extend .d-flex;
+	@extend .flex-column;
+	position: relative;
+}
+.form-group_icon{
+	position: absolute;
+    bottom:   18px;
+    left:     15px;
+    z-index:  1;
+}
+.form-label{
+	@extend .w-100;
+	margin-bottom: .6rem;
+	display:       block;
+	font-weight:   700;
+	font-size:     .8rem;
+	order:         0;
+}
+.form-input{
+	@extend .w-100;
+	background:    var(--light-grayish-cyan_);
+	border-radius: 5px;
+	border:        2px solid var(--light-grayish-cyan_);
+	color: var(--very-dark-cyan);
+	font-family:   var(--body-font-family);
+	font-size:     1.2rem;
+	font-weight:   600;
+	padding:       .6rem;
+	padding-left:  40px;
+	position:      relative;
+	text-align:    right;
+	order: 			1;
+	&::placeholder{
+		color:         var(--dark-grayish-cyan_);
+	}
+	&:focus, &:active, &.active{
+		border: 2px solid var(--strong-cyan);
+		color: var(--very-dark-cyan);
+	}
+	&:focus-visible{
+		outline:   0px;
+	}
+	&.invalid{
+		border: 2px solid #E53935;
+		& ~ label{
+			position: relative;
+			&::after{
+				content: "Can't be zero";
+				position: absolute;
+				right: 0;
+				color: red;
+			}
+		}
+	}
+}
+.form-input_btn{
+	padding:       .3rem;
+}
+.cont-buttons{
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	@include media-breakpoint($sm) { 
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+.form-btn{
+	width:          100%;
+	font-size:      1.1rem;
+	font-family:    var(--body-font-family);
+	font-weight:    700;
+	padding-top:    .5rem;
+    padding-bottom: .5rem;
+}

@@ -1,0 +1,64 @@
+@import '_variables';
+@import '_reboot';
+@import '_utilities';
+
+
+html{
+	height: 100%;
+}
+body{
+	background-color: var(--light-grayish-cyan);
+	height: 100vh;
+	width: 100vw;
+}
+header{
+	height: 14vh;
+	@extend .d-flex;
+	@extend .justify-content-center;
+	align-items: center;
+	img{
+		width: auto;
+    	height: 50%;
+    	@include media-breakpoint($sm) { 
+    		height: auto;
+    	}
+	}
+	@include media-breakpoint($sm) {
+		height: 20vh;
+		align-items: flex-end;
+	}
+}
+main{
+	width: 100%;
+	position: relative;
+	height: 100vh;
+	@extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    @extend .flex-column;
+    @include media-breakpoint($sm) { 
+    	height: 75vh;
+    }
+}
+footer{
+	height: 5vh;
+}
+// h1{
+// 	font-size: 1.6rem;
+//     font-weight: 900;
+// }
+// a{
+// 	font-weight: var(--body-font-weight-900);
+// 	&.link-mute{
+// 		color: var(--desaturated_blue); 
+// 		text-decoration: none;
+// 		&:hover{
+// 			color: var(--dark_blue);
+// 		}
+// 	}
+// }
+
+
+@import '_cards';
+@import '_buttons';
+@import '_forms';

@@ -1,0 +1,26 @@
+.btn{
+	@extend .p-1;
+	border-radius: 8px;
+	border: 0px;
+	box-shadow: $shadow;
+	cursor: pointer;
+	&.btn-primary{
+		background: var(--very-dark-cyan);
+		color: var(--white);
+		&:hover, &.active{
+			background: var(--strong-cyan);
+			color: var(--black);
+		}
+	}
+	&.btn-secondary{
+		background: var(--strong-cyan);
+		color: var(--very-dark-cyan);
+		text-transform: uppercase;
+		&:hover{
+			background: var(--light-grayish-cyan_);
+		}
+		&:active{
+			background: var(--strong-cyan);
+		}
+	}
+}

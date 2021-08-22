@@ -1,0 +1,15 @@
+{
+  "name": "order_summary_component",
+  "version": "1.0.0",
+  "description": "Challenge Frontend Mentor Order summary component",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w css/sass/ -o css/"
+  },
+  "author": "Anthoni Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

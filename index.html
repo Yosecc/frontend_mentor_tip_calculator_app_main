@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="logo" class="logo">
+  </header>
+  <main>
+    <div class="card">
+      <div class="card_body">
+        <div class="d-flex flex-wrap">
+          <div id="box-calculator" class="w-100 w-sm-50 d-flex flex-column justify-content-between pr-sm-2">
+            <div class="form-group">
+              <img src="./images/icon-dollar.svg" alt="dolar" class="form-group_icon">
+              <input type="text" class="form-input" id="bill" placeholder="0">
+              <label for="bill" class="form-label">Bill</label>
+            </div>
+            <div class="form-group form-buttons">
+              <label for="#" class="form-label">Select Tip %</label>
+              <div class="w-100 d-grid cont-buttons">
+                <button type="button" class="btn btn-primary form-btn" data-percentage="5">5%</button>
+                <button type="button" class="btn btn-primary form-btn" data-percentage="10">10%</button>
+                <button type="button" class="btn btn-primary form-btn" data-percentage="15">15%</button>
+                <button type="button" class="btn btn-primary form-btn" data-percentage="25">25%</button>
+                <button type="button" class="btn btn-primary form-btn" data-percentage="50">50%</button>
+                <input type="text" class="form-input form-input_btn" placeholder="Custom">
+              </div>
+            </div>
+            <div class="form-group">
+              <img src="./images/icon-person.svg" alt="dolar" class="form-group_icon">
+              <input type="text" class="form-input " id="people" placeholder="0">
+              <label for="people" class="form-label">Number of People</label>
+            </div>
+          </div>
+          <div id="box-results" class="w-100 w-sm-50 card card-primary ">
+            <div class="card_body d-flex flex-column justify-content-between h-100">
+              <div class="box-results">
+                <div class="d-flex justify-content-between box-results_numbers">
+                  <div>
+                    <p>Tip Amount</p>
+                    <span> / person</span>
+                  </div>
+                  <h2 id="tipoAmount">$0.00</h2>
+                </div>
+                <div class="d-flex justify-content-between box-results_numbers">
+                  <div>
+                    <p>Total</p>
+                    <span>/ person</span>
+                  </div>
+                 <h2 id="total">$0.00</h2>
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary reset" >Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Anthoni Rodriguez</a>.
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
